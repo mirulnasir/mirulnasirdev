@@ -5,8 +5,7 @@ const nextConfig = {
         return [
             {
                 source: '/api/:path*',
-                destination: 'http://cors.mirwulqt.com:3000/api/:path*',
-
+                destination: 'https://www.mirulnasir.dev/api/:path*' // Proxy to Backend
             },
         ];
     },

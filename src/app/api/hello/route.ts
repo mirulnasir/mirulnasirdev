@@ -1,6 +1,9 @@
 'use server'
 import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
+
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+
 export async function GET() {
     const response = NextResponse
     cookies().set('hello', 'world', {
@@ -9,13 +12,22 @@ export async function GET() {
         secure: true,
         sameSite: 'lax'
     })
+    if (!cookies().has('hello')) {
+        // throw new Error('failed to set cookies')
+        return response.json({}, { status: 500, statusText: 'failed to set cookies' })
 
-    return response.json({ hello: 'world' })
+    }
+    await delay(500)
+    return response.json({ message: 'added cookies "hello". please check cookies tab.' })
 }
 
 export async function POST() {
     const response = NextResponse
-    cookies().has('hello') && cookies().delete('hello')
-    return response.json({ success: true })
+    if (!cookies().has('hello')) {
+        // throw new Error('cookies not found')
+        return response.json({ message: 'cookies not found' }, { status: 404, statusText: 'cookies not found' })
+    }
+    cookies().delete('hello')
+    return response.json({ message: 'deleted cookies "hello".' })
 }
 
