@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button";
 import Spreadsheet from "react-spreadsheet";
 import { ReactGrid, Column, Row } from "@silevis/reactgrid";
+// import '@silevis/reactgrid/styles.css'
 import React from "react";
-import "@silevis/reactgrid/styles.css";
 interface Person {
     name: string;
     surname: string;
@@ -67,8 +67,7 @@ export default function SpreadsheetPage() {
     return (
         <div className="container p-12 mx-auto">
             <h1>Spreadsheet</h1>
-            <Spreadsheet data={data} />
-            <ReactGrid rows={rows} columns={columns} />
+            <ReactGrid rows={rows} columns={columns} enableRangeSelection enableFillHandle />
         </div>
     )
 }
