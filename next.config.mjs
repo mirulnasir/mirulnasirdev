@@ -13,6 +13,7 @@ const nextConfig = {
     //         }
     //     ];
     // },
+    transpilePackages: ['jotai-devtools'],
     async headers() {
         return [
             {
