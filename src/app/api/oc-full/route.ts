@@ -462,11 +462,9 @@ const createAddon = (addon: typeof postResult.value.eligibleAddOn[number]) => {
     }
 }
 export async function POST(request: NextRequest) {
-    const body = await request.json() as TotalPayableBody
-    console.log(JSON.parse(JSON.stringify(body)), typeof body)
     const result = {
         ...postResult,
-        addOn: body.addOn ? body.addOn.map(addon => ({
+        addOn: postResult.value.eligibleAddOn ? postResult.value.eligibleAddOn.map(addon => ({
             ...addon,
             ...(getAddonDetail(addon.code) ? createAddon(getAddonDetail(addon.code) as typeof postResult.value.eligibleAddOn[number]) : {})
         })) : []
