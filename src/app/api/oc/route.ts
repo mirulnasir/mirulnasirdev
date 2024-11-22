@@ -466,10 +466,10 @@ export async function POST(request: NextRequest) {
     console.log(JSON.parse(JSON.stringify(body)), typeof body)
     const result = {
         ...postResult,
-        // addOn: body.addOn ? body.addOn.map(addon => ({
-        //     ...addon,
-        //     ...(getAddonDetail(addon.code) ? createAddon(getAddonDetail(addon.code) as typeof postResult.value.eligibleAddOn[number]) : {})
-        // })) : []
+        addOn: body.addOn ? body.addOn.map(addon => ({
+            ...addon,
+            ...(getAddonDetail(addon.code) ? createAddon(getAddonDetail(addon.code) as typeof postResult.value.eligibleAddOn[number]) : {})
+        })) : []
     }
     await artificialDelay();
     return Response.json(result);
