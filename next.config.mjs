@@ -27,6 +27,21 @@ const nextConfig = {
                 ]
             }
         ]
+    },
+    async redirects() {
+        return [
+            {
+                source: '/:path*',
+                has: [
+                    {
+                        type: 'host',
+                        value: 'mirulnasir.dev',
+                    },
+                ],
+                destination: 'https://www.mirulnasir.dev/:path*',
+                permanent: true,
+            },
+        ]
     }
 };
 
