@@ -1,8 +1,8 @@
 'use server'
+import { delay } from "@/lib/utils"
 import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
 export async function GET() {
     const response = NextResponse
