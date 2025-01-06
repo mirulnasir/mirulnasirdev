@@ -7,3 +7,7 @@ export async function POST(request: NextRequest) {
     const redirectUrl = toUrl || defaultUrl
     return Response.redirect(redirectUrl)
 }
+
+export async function GET() {
+    return NextResponse.json({ url: defaultUrl })
+}
