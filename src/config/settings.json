@@ -1,0 +1,205 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    // we try to make semantic highlighting look good
+    "editor.semanticHighlighting.enabled": true,
+    // prevent VSCode from modifying the terminal colors
+    "terminal.integrated.minimumContrastRatio": 1,
+    // make the window's titlebar use the workbench colors
+    "window.titleBarStyle": "custom",
+    // applicable if you use Go, this is an opt-in flag!
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "[postcss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": true,
+    "python.languageServer": "Jedi",
+    "terminal.integrated.profiles.osx": {
+        "fish": {
+            "path": "/usr/local/bin/fish",
+            "args": []
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "editor.fontFamily": "MonoLisa Nerd Font Mono, MonoLisa Trial, Jetbrains Mono, JetbrainsMono NL Nerd Font Mono,Fira Code,Cascadia Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontWeight": "400",
+    "editor.fontVariations": true,
+    "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss02' on",
+    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 24,
+    "editor.formatOnSave": true,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "vscode_custom_css.imports": [
+        "file:///Users/mqt/.vscode/extensions/robbowen.synthwave-vscode-0.1.10/synthwave84.css"
+    ],
+    "files.associations": {
+        "*.tsx": "typescriptreact",
+        "*.js": "javascript",
+        "*.env.development": "env",
+        "*.env.production": "env",
+        "*.env.local": "env"
+    },
+    "editor.codeActionsOnSave": [
+        "source.formatDocument",
+        "source.fixAll.eslint"
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.inlineSuggest.enabled": true,
+    "editor.cursorSurroundingLines": 15,
+    "editor.cursorStyle": "line",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "phase",
+    "terminal.integrated.env.osx": {},
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "Classes \\=([^;]*);",
+            "'([^']*)'"
+        ],
+        [
+            "Classes \\=([^;]*);",
+            "\"([^\"]*)\""
+        ],
+        [
+            "Classes \\=([^;]*);",
+            "\\`([^\\`]*)\\`"
+        ],
+        [
+            "ClassName \\=([^;]*);",
+            "'([^']*)'"
+        ],
+        [
+            "ClassName \\=([^;]*);",
+            "\"([^\"]*)\""
+        ],
+        [
+            "ClassName \\=([^;]*);",
+            "\\`([^\\`]*)\\`"
+        ]
+    ],
+    "editor.inlineSuggest.showToolbar": "always",
+    "terminal.external.osxExec": "warp.app",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "lineBreakInsert"
+            ],
+            "silent": true
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "hediet.vscode-drawio.resizeImages": null,
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.highlights.backgroundColourScheme": [
+        "yellow",
+        "lime"
+    ],
+    "todo-tree.highlights.foregroundColourScheme": [
+        "black"
+    ],
+    "typeChallenges.workspaceFolder": "/Users/mqt/Documents/sandbox/magnus/apps/web-astro/src/typescript-challenges/easy",
+    "editor.accessibilitySupport": "off",
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "git.ignoreRebaseWarning": true,
+    "workbench.startupEditor": "none",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "console-ninja.featureSet": "Community",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "cursor.cpp.disabledLanguages": [
+        "scminput"
+    ],
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "everforest.darkContrast": "hard",
+    "everforest.italicKeywords": true
+}
