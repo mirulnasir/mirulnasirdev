@@ -2,79 +2,423 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/Larken-Thin.eot");
+  src: url("/fonts/Larken-Thin.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Larken-Thin.woff2") format("woff2"),
+    url("/fonts/Larken-Thin.woff") format("woff"),
+    url("/fonts/Larken-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/Larken-Bold.eot");
+  src: url("/fonts/Larken-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Larken-Bold.woff2") format("woff2"),
+    url("/fonts/Larken-Bold.woff") format("woff"),
+    url("/fonts/Larken-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/Larken-Regular.eot");
+  src: url("/fonts/Larken-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Larken-Regular.woff2") format("woff2"),
+    url("/fonts/Larken-Regular.woff") format("woff"),
+    url("/fonts/Larken-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/Larken-Light.eot");
+  src: url("/fonts/Larken-Light.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Larken-Light.woff2") format("woff2"),
+    url("/fonts/Larken-Light.woff") format("woff"),
+    url("/fonts/Larken-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Larken";
+  src: url("/fonts/Larken-Medium.eot");
+  src: url("/fonts/Larken-Medium.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Larken-Medium.woff2") format("woff2"),
+    url("/fonts/Larken-Medium.woff") format("woff"),
+    url("/fonts/Larken-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ammer";
+  src: url("/fonts/AmmerHandwriting-Web.eot");
+  src: url("/fonts/AmmerHandwriting-Web.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/AmmerHandwriting-Web.woff2") format("woff2"),
+    url("/fonts/AmmerHandwriting-Web.woff") format("woff"),
+    url("/fonts/AmmerHandwriting-Web.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 3.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
   }
 }
+.body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
 
+  --accent: var(--red);
+}
 @layer base {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
-  body,
   html {
-    @apply h-full;
+    @apply scroll-smooth;
   }
+  body {
+    @apply antialiased  text-background font-body transition-all duration-300 scroll-smooth font-thin;
+  }
+}
+
+.project-grid {
+  @apply relative md:grid  grid-flow-row content-stretch justify-around items-stretch justify-items-stretch;
+  gap: 3rem 3rem;
+  grid-template: "." 6vw / 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 6vw;
+  grid-auto-columns: 1fr;
+}
+.project-grid {
+  @apply space-y-2 md:space-y-0;
+  & > div:not(:first-child) {
+    @apply aspect-video md:aspect-auto;
+  }
+}
+.project-0 {
+  grid-area: span 1 /1 / span 1 / 3;
+}
+.project-1 {
+  grid-area: 1 / 3 / 4 / 6;
+}
+.project-2 {
+  grid-area: auto;
+}
+.project-3 {
+  grid-area: 2 / 1 / 4 / 3;
+}
+.project-4 {
+  grid-area: 4 / 2 / 7 / 4;
+}
+.project-5 {
+  grid-area: 5 / 4 / span 2 / span 1;
+}
+.project-6 {
+  grid-area: 7 / 3 / span 2 / span 2;
+}
+
+.progress {
+  position: sticky;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.progress svg {
+  transform: translateX(-100px) rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 5%;
+  fill: none;
+}
+
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --accent: var(--red);
+
+  margin: 0;
+  padding: 0;
+
+  padding-bottom: 100px;
+}
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+.progress {
+  position: sticky;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.progress svg {
+  transform: translateX(-100px) rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 5%;
+  fill: none;
+}
+
+.progress .indicator {
+  stroke: var(--accent);
+}
+
+.text--cool {
+  background: linear-gradient(
+    to right,
+
+    rgb(210, 210, 210) 50%,
+    rgb(37, 37, 37) 50%
+  );
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* margin-bottom: -250px; */
+  @apply relative leading-tight;
+  display: block;
+  text-align: center;
+  /* outline: 6px dotted teal; */
+  /* font-size: vw; */
+}
+
+.demo-3 {
+  --color-text: #1ed97c;
+  --color-link: #fff;
+  --color-link-hover: #fff;
+  --color-title: #fff;
+}
+
+.frame {
+  padding: 3rem 5vw;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.frame__title {
+  font-size: 1rem;
+  margin: 0 0 1rem;
+  font-weight: normal;
+}
+
+.frame__links {
+  display: inline;
+}
+
+.frame__github,
+.frame__links a:not(:last-child),
+.frame__demos a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.frame__demos {
+  margin: 1rem 0;
+}
+
+.frame__demo--current,
+.frame__demo--current:hover {
+  text-decoration: underline;
+  color: var(--color-link);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 13rem);
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content__title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: -5.5vw 0 0 0;
+  z-index: 100;
+  font-size: 10vw;
+  color: var(--color-title);
+  line-height: 1;
+}
+.content.content--canvas canvas {
+  z-index: 0;
+}
+@media screen and (min-width: 53em) {
+  .message {
+    display: none;
+  }
+  .frame {
+    position: fixed;
+    text-align: left;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    display: grid;
+    align-content: space-between;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    padding: 2rem 2.25rem;
+    pointer-events: none;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title title ... "
+      "... ... ..."
+      "github demos links";
+  }
+  .frame__title-wrap {
+    grid-area: title;
+    display: flex;
+  }
+  .frame__title {
+    margin: 0;
+  }
+  .frame__github {
+    grid-area: github;
+    justify-self: start;
+    margin: 0;
+  }
+  .frame__demos {
+    margin: 0;
+    grid-area: demos;
+    justify-self: center;
+  }
+  .frame__links {
+    grid-area: links;
+    padding: 0;
+    justify-self: end;
+  }
+  .frame a {
+    pointer-events: auto;
+  }
+  .content {
+    height: 100vh;
+    justify-content: center;
+  }
+}
+html,
+body {
+  background: hsla(0, 0%, 5%, 1);
 }
