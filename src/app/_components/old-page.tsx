@@ -1,12 +1,9 @@
-import About from '@/components/About'
-import Container from '@/components/Container'
-import LeftSticky from '@/components/LeftSticky'
-import PastWork from '@/components/Work'
-import Image from 'next/image'
-import HistorySection from '@/components/History'
-import NoiseBg from '@/components/NoiseBg'
-import dynamic from 'next/dynamic'
-import Shift from '@/components/Shift'
+import About from '@/components/portfolio/About'
+import Container from '@/components/portfolio/Container'
+import HistorySection from '@/components/portfolio/History'
+import LeftSticky from '@/components/portfolio/LeftSticky'
+import Shift from '@/components/portfolio/Shift'
+import PastWork from '@/components/portfolio/Work'
 export default function Home() {
     return (
         <div className='relative'>
